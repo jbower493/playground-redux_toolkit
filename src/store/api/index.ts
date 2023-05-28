@@ -6,13 +6,13 @@ export interface MutationResponse {
 
 export const appApi = createApi({
     baseQuery: fetchBaseQuery({
-        baseUrl: "https://google.com",
-        credentials: "include",
+        baseUrl: "http://localhost:4000",
+        credentials: "omit",
         prepareHeaders: (headers) => {
             headers.set("Accept", "application/json");
             return headers;
         },
     }),
-    tagTypes: ["Something"],
+    tagTypes: ["Posts"],
     endpoints: () => ({}),
 });
